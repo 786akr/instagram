@@ -4,97 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Redish"
+    android:onClick="RootcCickMethod"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="307dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/insta" />
+
     <EditText
-        android:id="@+id/edtName"
+        android:id="@+id/edtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#EDB1B1"
+        android:layout_margin="10dp"
+        android:layout_marginTop="7dp"
         android:ems="10"
-        android:hint="Please Enter your name"
+        android:foregroundGravity="center"
+        android:hint="            Enter Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFAFA"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="       Enter UserName"
         android:inputType="textPersonName"
-        android:textSize="30sp"
+        android:textColor="#FFFAFA"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPunchPower" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <EditText
-        android:id="@+id/edtPunchPower"
+        android:id="@+id/edtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#EDB1B1"
+        android:layout_margin="10dp"
         android:ems="10"
-        android:hint="Enter Punch power"
-        android:inputType="number"
-        android:textSize="30sp"
+        android:hint="        Enter  Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edtPunchSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#EDB1B1"
-        android:ems="10"
-        android:hint="Enter Punch Speed"
-        android:inputType="number"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPunchDamage" />
-
-    <EditText
-        android:id="@+id/edtPunchDamage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#EDB1B1"
-        android:ems="10"
-        android:hint="Enter Punch Damage"
-        android:inputType="number"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="122dp"
-        android:layout_height="54dp"
-        android:text="Submit"
+        android:id="@+id/btnLogin"
+        android:layout_width="298dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorAccent"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPunchSpeed" />
-
-    <TextView
-        android:id="@+id/GetData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Get Data From Server"
-        android:textColor="#00ff00"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
     <Button
-        android:id="@+id/getAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/btnSignUp"
+        android:layout_width="298dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/RoyalBlue"
+        android:text="Sign up"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GetData" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
