@@ -75,7 +75,7 @@ onClick(btnSignUp);
                             if (e == null) {
 
                                 FancyToast.makeText(MainActivity.this, AppUser.getUsername() + " is Signed up", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
-
+                                trasistionToSocialMediaActivity();
                             } else {
                                 FancyToast.makeText(MainActivity.this, e.getMessage() + "ERROR", FancyToast.LENGTH_LONG, FancyToast.ERROR, true).show();
                             }
@@ -101,6 +101,10 @@ try {
     e.printStackTrace();
 
 }
+    }
+    private void trasistionToSocialMediaActivity(){
+        Intent intent=new Intent(MainActivity.this,SocialMedia_Activity.class);
+        startActivity(intent);
     }
 }
 
