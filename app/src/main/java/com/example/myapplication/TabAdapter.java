@@ -21,7 +21,7 @@ public class TabAdapter extends FragmentPagerAdapter {
                 return new ProfileTab();
             case 1:
                 return new UserTab();
-            case 3:
+            case 2 :
                 return new SharePitureTab();
             default:
             return null;
