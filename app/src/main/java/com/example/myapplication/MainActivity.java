@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-   getSupportActionBar().setTitle("Sign Up");
         ParseInstallation.getCurrentInstallation().saveInBackground();// build a connection with parse server
          edtEmail=findViewById(R.id.edtEmail);
          edtpassword=findViewById(R.id.edtPassword);

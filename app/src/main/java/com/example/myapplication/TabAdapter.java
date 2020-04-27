@@ -8,26 +8,29 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TabAdapter extends FragmentPagerAdapter {
-    public TabAdapter(  FragmentManager fm)
-    {
+    public TabAdapter(FragmentManager fm) {
         super(fm);
     }
 
     @NonNull
     @Override
-    public Fragment getItem(int Poasition) {
-        switch (Poasition) {
+    public Fragment getItem(int position) {
+        switch (position) {
             case 0:
                 return new ProfileTab();
             case 1:
                 return new UserTab();
-            case 2 :
-                return new SharePitureTab();
-            default:
-            return null;
+            case 2:
+                return new PictureTab();
+
+                default:
+                return null;
+
         }
 
+
     }
+
 
     @Override
     public int getCount() {
@@ -43,10 +46,11 @@ public class TabAdapter extends FragmentPagerAdapter {
             case 1:
                 return "User";
             case 2:
-                return "SharePicture";
+                return "Picture";
             default:
-            return null;
+                return null;
         }
 
     }
 }
+
